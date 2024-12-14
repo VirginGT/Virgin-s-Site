@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2024 by anonymous (http://jsbin.com/kiwuvolepo/6/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe to VirginGT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #ff69b4, #ffe6f2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            position: relative;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 90%;
+            max-width: 600px;
+            text-align: left;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .text-content {
+            margin-left: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .subscribe-btn {
+            background-color: #ff4747;
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        .subscribe-btn:hover {
+            background-color: #ff2f2f;
+        }
+
+        .discord-btn {
+            background-color: #7289da;
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            margin-top: 1rem;
+        }
+
+        .discord-btn:hover {
+            background-color: #5a6fb5;
+        }
+
+        /* Cat image styling */
+        #cat {
+            position: absolute;
+            width: 30px;  /* Smaller size */
+            height: 30px; /* Smaller size */
+            pointer-events: none;
+            transition: transform 0.1s ease-in-out;
+            z-index: 1000; /* Ensure the cat is on top */
+        }
+
+        /* Image styling for YouTube channel logo */
+        #yt-logo {
+            width: 80px; /* Resize the image */
+            height: auto;
+            border-radius: 15px; /* Rounded corners */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- YouTube logo next to text -->
+        <img id="yt-logo" src="https://yt3.googleusercontent.com/_2bABm2fLSdOysBc34OT45nKwHHtdtjixcqZV2Ia058HBZr06ea5JWJ2UoEpUmEmU-86xza3JA=s160-c-k-c0x00ffffff-no-rj" alt="VirginGT YouTube Logo">
+        
+        <div class="text-content">
+            <h1>Subscribe to VirginGT on YouTube!</h1>
+            <p>Join the VirginGT community for amazing content and updates. Don’t miss out!</p>
+            <a href="https://www.youtube.com/@VirginGT" target="_blank" class="subscribe-btn">Subscribe Now</a>
+            <a href="https://discord.gg/8FwfsGZzFV" target="_blank" class="discord-btn">Join Our Discord</a>
+        </div>
+    </div>
+
+    <!-- Cat Image -->
+    <img id="cat" src="https://www.pngkey.com/png/full/308-3082863_pusheen-cat-pusheen-pixel-art.png" alt="Pusheen Cat">
+
+    <script>
+        // Get the cat image element
+        const cat = document.getElementById('cat');
+
+        // Event listener for mouse move
+        document.addEventListener('mousemove', (e) => {
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
+            
+            // Position the cat right over the cursor
+            cat.style.left = mouseX + 'px';
+            cat.style.top = mouseY + 'px';
+            
+            // Add a little delay to make the movement smoother
+            cat.style.transform = 'translate(-50%, -50%)';  // Centering the image over the cursor
+        });
+    </script>
+</body>
+</html>
